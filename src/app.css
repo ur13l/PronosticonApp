@@ -17,3 +17,43 @@ refer to http://docs.nativescript.org/ui/theme.
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
+.fondo{
+    background-color: black
+}
+.btnRed{
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+    background-color: red;
+}
+.btnList{
+    height: 250dp;
+    width: fit-content;
+    color: white;
+    background-color:#424242;
+}
+.btnOrange{
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+    background-color: orange;
+}
+.line{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: orange;
+    border-bottom-color: orange;
+    border-bottom-width: 2px;
+}
+.textLavel{
+    margin-left: 20%;
+    margin-right: 20%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    position: relative;
+}
+.abajo{
+    margin-top: 85%;
+}

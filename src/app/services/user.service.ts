@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from '~/app/models/user';
 
+
 @Injectable()
 export class UserService {
   public users : User[] = [
@@ -16,16 +17,14 @@ export class UserService {
   getUsers() : User[] {
     return this.users;
   }
-
+  checkLg(){
+    console.log("entra");
+    //nsRoeterLink
+  }
+  chek(){
+    console.log("el otro boton");
+  }
   fun2() {
-
-  }
-  
-  fun3 () {
-
-  }
-
-  fun4() {
 
   }
 
