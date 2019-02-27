@@ -1,5 +1,6 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
+import {NativeScriptFormsModule} from "nativescript-angular/forms"
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -8,6 +9,8 @@ import { ItemDetailComponent } from "./item/item-detail.component";
 import { LoginComponent } from "./components/login/login.component";
 import { UserService } from "./services/user.service";
 import { IndexComponent } from "./components/index/index.component";
+import { BaseService } from "./services/base.service";
+import { HttpClientModule } from "@angular/common/http";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -21,7 +24,9 @@ import { IndexComponent } from "./components/index/index.component";
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule,
+        NativeScriptFormsModule
     ],
     declarations: [
         AppComponent,
@@ -31,6 +36,7 @@ import { IndexComponent } from "./components/index/index.component";
         IndexComponent
     ],
     providers: [
+        BaseService,
         UserService
     ],
     schemas: [

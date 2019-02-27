@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '~/app/services/user.service';
 
 @Component({
 	moduleId: module.id,
@@ -8,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class IndexComponent implements OnInit {
+	public user;
+	constructor(private userService : UserService) { }
 
-	constructor() { }
-
-	ngOnInit() { }
+	ngOnInit() {
+		this.user = this.userService.getUser();
+	 }
 }

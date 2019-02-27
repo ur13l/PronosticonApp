@@ -1,22 +1,24 @@
 import { Injectable } from '@angular/core';
 import { User } from '~/app/models/user';
+import { BaseService } from './base.service';
 
 
 @Injectable()
-export class UserService {
-  public users : User[] = [
-    new User("Uriel"),
-    new User("Hotakuxx"),
-    new User("Daniel"),
-    new User("Chema")
-  ];
+export class UserService extends BaseService{
 
-  constructor() { 
+  login(codigo : string) {
+      let headers = this.createRequestHeader();
+      return this.http.post(this.serverUrl + 'auth/login', { codigo: codigo }, { headers: headers });
   }
 
-  getUsers() : User[] {
-    return this.users;
+  getUser() {
+    let user = localStorage.user;
+    return user;
   }
+  
+
+
+
   checkLg(){
     console.log("entra");
     //nsRoeterLink

@@ -24,13 +24,10 @@ core theme, such as p-20, btn, h2, and list-group. You can view a full list of t
 class names available for styling your app at https://docs.nativescript.org/ui/theme.
 -->
 <StackLayout class="page fondo">
-    <label class="text-center textLavel" style="margin-top: 20%" text="Introdusca su"></label>
-    <label class="text-center textLavel" style="margin-bottom: 20%" text="código de acceso"></label>
-    <textField secure="true" id="tfcode" autocorrect="false" maxLenght="32" class="line"></textField>
-    <button text="Ingresar" class="btn btnOrange" id="logInId" (tap)="checkLg()"></button>
+    <label class="text-center textLabel" style="margin-top: 20%" text="Introduzca su"></label>
+    <label class="text-center textLabel" style="margin-bottom: 20%" text="código de acceso"></label>
+    <textField secure="true" id="tfcode" autocorrect="false" maxLenght="32" [(ngModel)]='codigo' class="line"></textField>
+    <button text="Ingresar" class="btn btnOrange" id="logInId" (tap)="login()"></button>
     <button text="Contacto" class="btn btnRed" id="contactoId" (tap)="contact()"></button>
 
 </StackLayout>
-<StackLaypout class="page"> 
-        <image src="https://www.pronosticon.club/img/logo.png" stretch="aspectFit" class="abajo"></image>
-</StackLaypout>
